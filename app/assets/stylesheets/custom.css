@@ -1,0 +1,84 @@
+/* Archivo: app/assets/stylesheets/custom.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Hace que el body ocupe toda la altura de la pantalla */
+}
+
+h1 {
+  color: #4a90e2;
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5em;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex: 1; /* Permite que el contenedor crezca para ocupar el espacio disponible */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #e9ecef;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+  font-size: 1.2em;
+  color: #333;
+}
+
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+a.button:hover {
+  background-color: #357abd;
+}
+
+a.delete-button {
+  background-color: #e74c3c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+a.delete-button:hover {
+  background-color: #c0392b;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  position: relative; /* Cambiamos a 'relative' para evitar que esté fijo */
+  bottom: 0;
+  width: 100%;
+  margin-top: auto; /* Hace que el footer se coloque al final si el contenido no llena la pantalla */
+}

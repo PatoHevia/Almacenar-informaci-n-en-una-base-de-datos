@@ -1,0 +1,43 @@
+<h1>Bienvenido a la Biblioteca de Medios</h1>
+
+<div class="container">
+  <h2>Películas</h2>
+  <%= link_to 'Añadir Nueva Película', new_movie_path, class: "button" %>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li>
+        <strong><%= movie.name %></strong> - <%= movie.director %><br>
+        <p><%= movie.synopsis %></p>
+        <%= link_to 'Ver más', movie_path(movie), class: "button" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h2>Series</h2>
+  <%= link_to 'Añadir Nueva Serie', new_serie_path, class: "button" %>
+  <ul>
+    <% @series.each do |serie| %>
+      <li>
+        <strong><%= serie.name %></strong> - <%= serie.director %><br>
+        <p><%= serie.synopsis %></p>
+        <%= link_to 'Ver más', serie_path(serie), class: "button" %>
+      </li>
+    <% end %>
+  </ul>
+
+  <h2>Documentales</h2>
+  <%= link_to 'Añadir Nuevo Documental', new_documentary_film_path, class: "button" %>
+  <ul>
+    <% @documentary_films.each do |documentary_film| %>
+      <li>
+        <strong><%= documentary_film.name %></strong> - <%= documentary_film.director %><br>
+        <p><%= documentary_film.synopsis %></p>
+        <%= link_to 'Ver más', documentary_film_path(documentary_film), class: "button" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<footer>
+  <p>Desarrollado por Patricio Hevia Fuentes - 2024</p>
+</footer>

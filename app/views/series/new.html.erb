@@ -1,0 +1,46 @@
+<h1>Añadir Nueva Serie</h1>
+
+<div class="container">
+  <!-- Contenedor para los botones -->
+  <div class="button-row">
+    <%= link_to 'Volver al inicio', root_path, class: "button left-button" %>
+    <%= link_to 'Lista de Series', series_path, class: "button right-button" %>
+  </div>
+
+  <!-- Formulario para añadir nueva serie -->
+  <%= form_with model: @serie, local: true do |form| %>
+    <% if @serie.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@serie.errors.count, "error") %> impidieron guardar la serie:</h2>
+        <ul>
+          <% @serie.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div>
+      <%= form.label :name, "Nombre de la Serie" %>
+      <%= form.text_field :name %>
+    </div>
+
+    <div>
+      <%= form.label :synopsis, "Sinopsis" %>
+      <%= form.text_area :synopsis %>
+    </div>
+
+    <div>
+      <%= form.label :director, "Director" %>
+      <%= form.text_field :director %>
+    </div>
+
+    <div>
+      <%= form.submit "Guardar Serie", class: "button" %>
+    </div>
+  <% end %>
+</div>
+
+<footer>
+  <p>Desarrollado por Patricio Hevia Fuentes - 2024</p>
+</footer>

@@ -1,0 +1,7 @@
+{
+    "name": "Media App",
+    "short_name": "Media",
+    "start_url": "/",
+    "display": "standalone"
+  }
+  

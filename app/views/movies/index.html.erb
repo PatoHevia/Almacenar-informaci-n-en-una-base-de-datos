@@ -1,0 +1,24 @@
+<h1>Lista de Películas</h1>
+
+<div class="container">
+  <!-- Contenedor para los botones -->
+  <div class="button-row">
+    <%= link_to 'Nueva Película', new_movie_path, class: "button left-button" %>
+    <%= link_to 'Volver al inicio', root_path, class: "button right-button" %>
+  </div>
+
+  <!-- Lista de películas -->
+  <ul>
+    <% @movies.each do |movie| %>
+      <li>
+        <strong><%= movie.name %></strong> - <%= movie.director %><br>
+        <p><%= movie.synopsis %></p>
+        <%= link_to 'Eliminar', movie_path(movie), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar esta película?' }, class: "delete-button" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<footer>
+  <p>Desarrollado por Patricio Hevia Fuentes - 2024</p>
+</footer>

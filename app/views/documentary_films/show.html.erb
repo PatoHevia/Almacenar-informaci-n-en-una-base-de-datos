@@ -1,0 +1,6 @@
+<h1><%= @documentary_film.name %></h1>
+<p><strong>Director:</strong> <%= @documentary_film.director %></p>
+<p><strong>Sinopsis:</strong> <%= @documentary_film.synopsis %></p>
+
+<%= link_to 'Volver a la lista de documentales', documentary_films_path %>
+<%= link_to 'Eliminar documental', documentary_film_path(@documentary_film), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar este documental?' } %>

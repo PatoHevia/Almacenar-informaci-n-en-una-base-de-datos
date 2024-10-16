@@ -1,0 +1,24 @@
+<h1>Lista de Documentales</h1>
+
+<div class="container">
+  <!-- Contenedor para los botones -->
+  <div class="button-row">
+    <%= link_to 'Nuevo Documental', new_documentary_film_path, class: "button left-button" %>
+    <%= link_to 'Volver al inicio', root_path, class: "button right-button" %>
+  </div>
+
+  <!-- Lista de documentales -->
+  <ul>
+    <% @documentary_films.each do |documentary_film| %>
+      <li>
+        <strong><%= documentary_film.name %></strong> - <%= documentary_film.director %><br>
+        <p><%= documentary_film.synopsis %></p>
+        <%= link_to 'Eliminar', documentary_film_path(documentary_film), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar este documental?' }, class: "delete-button" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<footer>
+  <p>Desarrollado por Patricio Hevia Fuentes - 2024</p>
+</footer>

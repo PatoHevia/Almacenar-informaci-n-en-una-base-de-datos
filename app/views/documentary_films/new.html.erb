@@ -1,0 +1,24 @@
+<h1>Agregar Nuevo Documental</h1>
+
+<%= form_with model: @documentary_film, local: true do |form| %>
+  <div>
+    <%= form.label :name, "Nombre" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :synopsis, "Sinopsis" %>
+    <%= form.text_area :synopsis %>
+  </div>
+
+  <div>
+    <%= form.label :director, "Director" %>
+    <%= form.text_field :director %>
+  </div>
+
+  <div>
+    <%= form.submit "Guardar Documental" %>
+  </div>
+<% end %>
+
+<%= link_to 'Volver a la lista', documentary_films_path %>

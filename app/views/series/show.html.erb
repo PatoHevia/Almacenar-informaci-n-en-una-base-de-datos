@@ -1,0 +1,6 @@
+<h1><%= @serie.name %></h1>
+<p><strong>Director:</strong> <%= @serie.director %></p>
+<p><strong>Sinopsis:</strong> <%= @serie.synopsis %></p>
+
+<%= link_to 'Volver a la lista de series', series_path %>
+<%= link_to 'Eliminar serie', serie_path(@serie), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar esta serie?' } %>

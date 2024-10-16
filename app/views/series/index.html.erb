@@ -1,0 +1,24 @@
+<h1>Lista de Series</h1>
+
+<div class="container">
+  <!-- Contenedor para los botones -->
+  <div class="button-row">
+    <%= link_to 'Nueva Serie', new_serie_path, class: "button left-button" %>
+    <%= link_to 'Volver al inicio', root_path, class: "button right-button" %>
+  </div>
+
+  <!-- Lista de series -->
+  <ul>
+    <% @series.each do |serie| %>
+      <li>
+        <strong><%= serie.name %></strong> - <%= serie.director %><br>
+        <p><%= serie.synopsis %></p>
+        <%= link_to 'Eliminar', serie_path(serie), method: :delete, data: { confirm: '¿Estás seguro de que deseas eliminar esta serie?' }, class: "delete-button" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<footer>
+  <p>Desarrollado por Patricio Hevia Fuentes - 2024</p>
+</footer>
